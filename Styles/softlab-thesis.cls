@@ -271,12 +271,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % roman font
-\def\font@roman{Times New Roman}
-%\def\font@roman{Liberation Serif}
+\def\font@roman{Liberation Serif}
 
 % sans serif font
-\def\font@sans{Arial}
-%\def\font@sans{Liberation Sans}
+\def\font@sans{Liberation Sans}
 
 % typewriter font
 \def\font@tt{Liberation Mono}
