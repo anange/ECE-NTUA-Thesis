@@ -1,6 +1,6 @@
 .PHONY: FORCE default clean distclean
 
-FILE=test
+FILE=thesis
 
 export SHELL=/bin/bash
 export TEXINPUTS:=.:./Styles//:${TEXINPUTS}

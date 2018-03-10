@@ -37,7 +37,4 @@ Thumbs.db*
 *.tof
 *.tpt
 *.vrb
-
-# The example PDF file
-
-/test.pdf
+*.pdf
