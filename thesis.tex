@@ -74,6 +74,7 @@ Software development, Free and open source software.
 \tableofcontents
 \listoftables
 \listoffigures
+\lstlistoflistings
 
 
 %%%  Main part of the book
@@ -265,7 +266,7 @@ Public License), η οποία επιτρέπει εμπορική χρήση, �
 %(TODO: Draw this myself)
 \begin{figure}
   \centering
-  \includegraphics[scale=0.4]{Figures/cmsarchitecture.png}
+  \includegraphics[scale=0.4,trim=4 4 4 4,clip]{Figures/cmsarchitecture.png}
   \caption[Η αρχιτεκτονική του CMS]{Οι υπηρεσίες του CMS και οι σχέσεις μεταξύ τους}
 \end{figure}
 
@@ -382,7 +383,7 @@ H αρχική έκδοση του Mooshak δημιουργήθηκε το 2000 
 %(TODO: draw this)
 \begin{figure}
   \centering
-  \includegraphics[scale=0.4]{Figures/mooshakarchitecture.png}
+  \includegraphics[scale=0.4,trim=4 4 4 4,clip]{Figures/mooshakarchitecture.png}
   \caption[Η αρχιτεκτονική του Mooshak]{Η αρχιτεκτονική του Mooshak με τρεις εξυπηρετητές}
 \end{figure}
 
@@ -429,7 +430,21 @@ code golf, δηλαδή επίτευξης της λύσης με το λιγό�
 
 \bigskip
 
-(TODO: Φωτογραφίες)
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.3]{Figures/mooshakproblem.png}
+  \caption[Οθόνη διαχείρισης προβλήματος]{Η οθόνη της διαχείρισης ενός διαγωνισμού.
+  Διακρίνονται συνολικά στατιστικά για τις υποβολές, η κατάσταση της ουράς και των
+  Workers.}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.3]{Figures/mooshakrankings.png}
+  \caption[Οθόνη διαχείρισης προβλήματος]{Η οθόνη της διαχείρισης ενός διαγωνισμού.
+  Διακρίνονται συνολικά στατιστικά για τις υποβολές, η κατάσταση της ουράς και των
+  Workers.}
+\end{figure}
 
 \FloatBarrier
 
@@ -500,7 +515,23 @@ C\#, Perl, Python, Ruby, PHP, Erlang, Javascript και SQL.
 η δυνατότητα του CATS για διαχείριση διαγωνισμών, αξιολόγηση και παρουσίαση των
 αποτελεσμάτων απ᾽ευθείας μέσω της γραμμής εντολών μέσω του API που προσφέρεται.
 
-TODO: Φωτογραφίες
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.3]{Figures/catsproblem.png}
+  \caption[Οθόνη διαχείρισης προβλήματος]{Η οθόνη της διαχείρισης ενός διαγωνισμού.
+  Διακρίνονται συνολικά στατιστικά για τις υποβολές, η κατάσταση της ουράς και των
+  Workers.}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.3]{Figures/catssubmission.png}
+  \caption[Οθόνη διαχείρισης προβλήματος]{Η οθόνη της διαχείρισης ενός διαγωνισμού.
+  Διακρίνονται συνολικά στατιστικά για τις υποβολές, η κατάσταση της ουράς και των
+  Workers.}
+\end{figure}
+
+\FloatBarrier
 
 \chapter{Περιγραφή Grader - Kewii}
 
@@ -672,7 +703,13 @@ Kewii και Grader, δηλαδή backend και frontend.
 σημείο που σταμάτησε. Μια ακριβέστερη περιγραφή της ροής φαίνεται στο παρακάτω
 σχήμα:
 
-(TODO σχημα εδώ)
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.3]{Figures/graderflow.png}
+  \caption[Οθόνη διαχείρισης προβλήματος]{Η οθόνη της διαχείρισης ενός διαγωνισμού.
+  Διακρίνονται συνολικά στατιστικά για τις υποβολές, η κατάσταση της ουράς και των
+  Workers.}
+\end{figure}
 
 \bigskip
 
@@ -689,12 +726,12 @@ Kewii και Grader, δηλαδή backend και frontend.
 
 \section{Διαδικτυακή εφαρμογή Grader}
 
-Ο Grader είναι μια web εφαρμογή υλοποιημένη σε PHP και HTML/CSS/JS, η οποία αποτελεί
-το frontend και μέρος του backend του συστήματος μας. Ως frontend εφαρμογή
-αναλαμβάνει να παρουσιάσει σε διαγωνιζόμενους και διαχειριστές τις σελίδες
-διαχείρισης, υποβολών και αποτελεσμάτων, ενώ ως backend αναλαμβάνει την υλοποίηση της
-λογικής του συστήματος, των διάφορων αλγορίθμων και ροών και την επικοινωνία με τη
-βάση δεδομένων και τον Kewii.
+Ο Grader είναι μια web εφαρμογή υλοποιημένη σε PHP και HTML/CSS/JS, η οποία
+αποτελεί το frontend και μέρος του backend του συστήματος μας. Ως frontend
+εφαρμογή αναλαμβάνει να παρουσιάσει σε διαγωνιζόμενους και διαχειριστές τις
+σελίδες διαχείρισης, υποβολών και αποτελεσμάτων, ενώ ως backend αναλαμβάνει την
+υλοποίηση της λογικής του συστήματος, των διάφορων αλγορίθμων και ροών και την
+επικοινωνία με τη βάση δεδομένων και τον Kewii.
 
 \bigskip
 
@@ -789,7 +826,7 @@ TODO: Καλύτερη περιγραφή της λειτουργίας της �
 ελέγχου (testcase groups) για ομαδοποίηση των τελευταίων, καθώς και ενός νέου
 τύπου εκτέλεσης των αρχείων ελέγχου. Η υλοποίηση του νέου τύπου εκτέλεσης, που
 θα αντιστοιχεί στο μπλε χρώμα (blue tag), κατά την αντιστοίχιση που
-παρουσιάστηκε στο κεφάλαιο 3.1.3 (TODO: link), ήταν μια χρήσιμη εισαγωγή στη
+παρουσιάστηκε στο κεφάλαιο 3.1.3, ήταν μια χρήσιμη εισαγωγή στη
 λειτουργία και στο codebase του Grader αλλά και στη βάση και τους σχετικούς
 πίνακες. Στο παρόν κεφάλαιο θα περιγραφεί πρώτα η μικρή αυτή προσθήκη και
 έπειτα η λογική και η υλοποίηση της προσθήκης των testcase groups.
@@ -872,8 +909,13 @@ tag και ο κώδικας που διαχειριζόταν το πάτημα
 υποβολής, υλοποιήθηκε η λογική των "μπλε" αρχείων ελέγχου, που ακόμα και να
 έχουν έρθει ως λανθασμένα, δεν επηρεάζουν την έκβαση.
 
-(TODO: εικόνα18, διαχείριση αρχείων ελέγχου σε μπραντς blue tag)
-
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.3]{Figures/bluetag.png}
+  \caption[Οθόνη διαχείρισης προβλήματος]{Η οθόνη της διαχείρισης ενός διαγωνισμού.
+  Διακρίνονται συνολικά στατιστικά για τις υποβολές, η κατάσταση της ουράς και των
+  Workers.}
+\end{figure}
 
 \section{Testcase Groups}
 
@@ -995,6 +1037,22 @@ callback για την χρησιμοποίηση αυτών των αποτελ
 
 (TODO: eikones 41 42)
 
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.3]{Figures/groupoverview.png}
+  \caption[Οθόνη διαχείρισης προβλήματος]{Η οθόνη της διαχείρισης ενός διαγωνισμού.
+  Διακρίνονται συνολικά στατιστικά για τις υποβολές, η κατάσταση της ουράς και των
+  Workers.}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.3]{Figures/groupedit.png}
+  \caption[Οθόνη διαχείρισης προβλήματος]{Η οθόνη της διαχείρισης ενός διαγωνισμού.
+  Διακρίνονται συνολικά στατιστικά για τις υποβολές, η κατάσταση της ουράς και των
+  Workers.}
+\end{figure}
+
 \bigskip
 
 Η εισαγωγή των testcase groups στο Grader επηρέασε, ακόμα, μεγάλο πλήθος οθονών
@@ -1022,7 +1080,21 @@ callback για την χρησιμοποίηση αυτών των αποτελ
 
 \end{itemize}
 
-Οι φωτογραφίες 43-45 επιδεικνύουν κάποιες από τις κύριες αλλαγές.
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.3]{Figures/allsubmissions.png}
+  \caption[Οθόνη διαχείρισης προβλήματος]{Η οθόνη της διαχείρισης ενός διαγωνισμού.
+  Διακρίνονται συνολικά στατιστικά για τις υποβολές, η κατάσταση της ουράς και των
+  Workers.}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.3]{Figures/cursubmission.png}
+  \caption[Οθόνη διαχείρισης προβλήματος]{Η οθόνη της διαχείρισης ενός διαγωνισμού.
+  Διακρίνονται συνολικά στατιστικά για τις υποβολές, η κατάσταση της ουράς και των
+  Workers.}
+\end{figure}
 
 \bigskip
 
@@ -1068,14 +1140,7 @@ clean code του Robert Martin. Μέρος των αλλαγών ήταν κα�
 
 \bigskip
 
-- Εξήγηση σχέσεων πινάκων
-
-- json, καλύτερη σχεδίαση με κλάσεις
-
-- Φωτογραφίες από ανέβασμα ομάδων αρχείων ελέγχου
-
-\bigskip
-
+draw this
 (TODO: εικόνες βάσης 38,39)
 
 
@@ -1112,10 +1177,16 @@ clean code του Robert Martin. Μέρος των αλλαγών ήταν κα�
 
 \bigskip
 
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.4,trim=4 4 4 4,clip]{Figures/beforesep.png}
+  \caption[Η αρχιτεκτονική του CMS]{Οι υπηρεσίες του CMS και οι σχέσεις μεταξύ τους}
+\end{figure}
 (TODO εδώ εικόνα διαχείρισης και ισως αλλαγή αναφορών σε εικονα 1, 2 κτλ.)
 
 \bigskip
 
+draw this
 (TODO εδώ εικόνα βάσης σχημα1)
 
 \bigskip
@@ -1194,6 +1265,7 @@ clean code του Robert Martin. Μέρος των αλλαγών ήταν κα�
 
 \bigskip
 
+draw this
 (TODO: πινακας σχημα3 με νεα βάση)
 
 \bigskip
@@ -1211,7 +1283,17 @@ clean code του Robert Martin. Μέρος των αλλαγών ήταν κα�
 
 \bigskip
 
-- φωτογραφία νέας διαχείρισης φωτογραφία 4
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.4,trim=4 4 4 4,clip]{Figures/aftersep.png}
+  \caption[Η αρχιτεκτονική του CMS]{Οι υπηρεσίες του CMS και οι σχέσεις μεταξύ τους}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.4,trim=4 4 4 4,clip]{Figures/aftersepall.png}
+  \caption[Η αρχιτεκτονική του CMS]{Οι υπηρεσίες του CMS και οι σχέσεις μεταξύ τους}
+\end{figure}
 
 \bigskip
 
@@ -1399,9 +1481,13 @@ descriptor.json σαν λίστες αντικειμένων. Κάθε αντι�
 τιμές orange, yellow, blue, green, purple. Ακολουθεί ένα πρότυπο
 descriptor.json στο οποίο έχουν συμπληρωθεί όλα τα διαθέσιμα πεδία.
 
-(TODO: προσθήκη descriptor σαν κωδικα η κατι)
+\lstinputlisting[caption=Παράδειγμα descriptor.json]{Listings/descriptordiploma.json}
 
-(TODO: εικόνα33)
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.4,trim=4 4 4 4,clip]{Figures/massupload.png}
+  \caption[Η αρχιτεκτονική του CMS]{Οι υπηρεσίες του CMS και οι σχέσεις μεταξύ τους}
+\end{figure}
 
 \subsection{Εργαλείο δημιουργίας}
 
@@ -1421,7 +1507,11 @@ descriptor.json αρχείου.
 η εκτέλεση του συγκεκριμένου script, μαζί με το αρχείο που δημιουργείται.
 
 
-(TODO:  εικονα ιντερακτιβ)
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.4,trim=4 4 4 4,clip]{Figures/interactive.png}
+  \caption[Παράδειγμα χρήσης interactive generator script]{Οι υπηρεσίες του CMS και οι σχέσεις μεταξύ τους}
+\end{figure}
 
 \section{Αλλαγή MySQL connector}
 
@@ -1443,7 +1533,11 @@ https://wiki.php.net/rfc/mysql\_deprecation).
 παρακάτω πίνακας σύγκρισης των προαναφερθέντων επεκτάσεων που υπάρχει στο
 manual της PHP (https://secure.php.net/manual/en/mysql.php TODO).
 
-(TODO: pinakas connectors)
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.4,trim=4 4 4 4,clip]{Figures/mysqlconnectors.png}
+  \caption[Παράδειγμα χρήσης interactive generator script]{Οι υπηρεσίες του CMS και οι σχέσεις μεταξύ τους}
+\end{figure}
 
 \bigskip
 
@@ -1514,43 +1608,7 @@ execute. Η επέκταση εμπεριέχει, επίσης, και δική
 παραδείγματα απλών λειτουργιών χρησιμοποιώντας τη συγκεκριμένη επέκταση/API.
 
 
-\begin{lstlisting}
-<?php
-$user = "root";
-$pass = "root";
-$dsn = "mysql:host=localhost;dbname=test";
-$charset = "utf8";
-
-$dbh = new PDO('mysql:host=localhost;dbname=test;charset=$charset', $user, $pass);
-?>
-
-<?php
-
-$query = "SELECT * FROM foo WHERE bar = " . $db->quote($zip);
-
-$result = $db->query($query);
-
-while($row = $result->fetch(PDO::FETCH_ASSOC)) {
-    print_r($row);
-}
-?>
-
-<?php
-$stmt = $dbh->prepare("INSERT INTO REGISTRY (name, value) VALUES (:name, :value)");
-$stmt->bindParam(':name', $name);
-$stmt->bindParam(':value', $value);
-
-// insert one row
-$name = 'one';
-$value = 1;
-$stmt->execute();
-
-// insert another row with different values
-$name = 'two';
-$value = 2;
-$stmt->execute();
-?>
-\end{lstlisting}
+\lstinputlisting[caption=Παραδείγματα χρήσης PDO]{Listings/pdoexamples.php}
 
 \chapter{Συμπεράσματα}
 
