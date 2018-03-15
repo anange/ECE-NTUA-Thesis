@@ -435,17 +435,15 @@ code golf, δηλαδή επίτευξης της λύσης με το λιγό�
 \begin{figure}
   \centering
   \includegraphics[scale=0.3,trim=4 4 4 4,clip]{Figures/mooshakproblem.png}
-  \caption[Οθόνη δ]{Η οθόνη της διαχείρισης ενός διαγωνισμού.
-  Διακρίνονται συνολικά στατιστικά για τις υποβολές, η κατάσταση της ουράς και των
-  Workers.}
+  \caption[Οθόνη προβλήματος Mooshak]{Η οθόνη παρουσίασης ενός προβλήματος για τους
+  διαγωνιζόμενους στο σύστημα Mooshak.}
 \end{figure}
 
 \begin{figure}
   \centering
   \includegraphics[scale=0.3,trim=4 4 4 4,clip]{Figures/mooshakrankings.png}
-  \caption[Οθόνη διαχείρισης προβλήματος]{Η οθόνη της διαχείρισης ενός διαγωνισμού.
-  Διακρίνονται συνολικά στατιστικά για τις υποβολές, η κατάσταση της ουράς και των
-  Workers.}
+  \caption[Οθόνη βαθμολογίας Mooshak]{Η οθόνη βαθμολογίας όλων των διαγωνιζόμενων
+  ομάδων σε ένα διαγωνισμό.}
 \end{figure}
 
 \FloatBarrier
@@ -493,7 +491,7 @@ To CATS είναι το τρίτο σύστημα που θα αναλυθεί. 
 γίνεται με το ανέβασμα ενός συμπιεσμένου αρχείου το οποίο περιέχει μια XML
 περιγραφή και τα απαραίτητα αρχεία ελέγχου.
 
-\lstinputlisting[caption=Παράδειγμα xml]{Listings/catsexample.xml}
+\lstinputlisting[frame=single,captionpos=b,caption=Παράδειγμα xml]{Listings/catsexample.xml}
 
 \bigskip
 
@@ -517,20 +515,23 @@ C\#, Perl, Python, Ruby, PHP, Erlang, Javascript και SQL.
 η δυνατότητα του CATS για διαχείριση διαγωνισμών, αξιολόγηση και παρουσίαση των
 αποτελεσμάτων απ᾽ευθείας μέσω της γραμμής εντολών μέσω του API που προσφέρεται.
 
+\FloatBarrier
+
 \begin{figure}
   \centering
   \includegraphics[scale=0.3,trim=4 4 4 4,clip]{Figures/catsproblem.png}
-  \caption[Οθόνη διαχείρισης προβλήματος]{Η οθόνη της διαχείρισης ενός διαγωνισμού.
-  Διακρίνονται συνολικά στατιστικά για τις υποβολές, η κατάσταση της ουράς και των
-  Workers.}
+  \caption[Διατύπωση προβλήματος CATS]{Η οθόνη του προβλήματος στο CATS. Δεν
+  περιέχει τίποτα παραπάνω από τη διατύπωση, αφού η υποβολή γίνεται από την οθόνη
+  του διαγωνισμού. Το σύστημα του CATS επιτρέπει και τη χρήση LaTeX όπως
+  φαίνεται στο Restrictions.}
 \end{figure}
 
 \begin{figure}
   \centering
   \includegraphics[scale=0.3,trim=4 4 4 4,clip]{Figures/catssubmission.png}
-  \caption[Οθόνη διαχείρισης προβλήματος]{Η οθόνη της διαχείρισης ενός διαγωνισμού.
-  Διακρίνονται συνολικά στατιστικά για τις υποβολές, η κατάσταση της ουράς και των
-  Workers.}
+  \caption[Οθόνη διαγωνισμού και υποβολής CATS]{Η οθόνη του διαγωνισμού που
+  περιέχει όλα τα προβλήματα του. Επιλέγοντας ένα πρόβλημα μπορούμε να υποβάλουμε
+  τη λύση στο κάτω μέρος της οθόνης.}
 \end{figure}
 
 \FloatBarrier
@@ -708,9 +709,8 @@ Kewii και Grader, δηλαδή backend και frontend.
 \begin{figure}
   \centering
   \includegraphics[scale=0.3,trim=4 4 4 4,clip]{Figures/graderflow.png}
-  \caption[Οθόνη διαχείρισης προβλήματος]{Η οθόνη της διαχείρισης ενός διαγωνισμού.
-  Διακρίνονται συνολικά στατιστικά για τις υποβολές, η κατάσταση της ουράς και των
-  Workers.}
+  \caption[Ροή Kewii]{Το διάγραμμα ροής που ακολουθείται σε κάθε νέα υποβολή
+  στον Kewii, όπως παρουσιάζεται στο \cite{Tsiamitros}.}
 \end{figure}
 
 \bigskip
@@ -914,9 +914,8 @@ tag και ο κώδικας που διαχειριζόταν το πάτημα
 \begin{figure}
   \centering
   \includegraphics[scale=0.3,trim=4 4 4 4,clip]{Figures/bluetag.png}
-  \caption[Οθόνη διαχείρισης προβλήματος]{Η οθόνη της διαχείρισης ενός διαγωνισμού.
-  Διακρίνονται συνολικά στατιστικά για τις υποβολές, η κατάσταση της ουράς και των
-  Workers.}
+  \caption[Προσθήκη blue tag]{Η οθόνη διαχείρισης αρχείων ελέγχου μετά την
+  προσθήκη του blue tag.}
 \end{figure}
 
 \section{Testcase Groups}
@@ -1040,17 +1039,16 @@ callback για την χρησιμοποίηση αυτών των αποτελ
 \begin{figure}
   \centering
   \includegraphics[scale=0.3,trim=4 4 4 4,clip]{Figures/groupoverview.png}
-  \caption[Οθόνη διαχείρισης προβλήματος]{Η οθόνη της διαχείρισης ενός διαγωνισμού.
-  Διακρίνονται συνολικά στατιστικά για τις υποβολές, η κατάσταση της ουράς και των
-  Workers.}
+  \caption[Επισκόπηση ομάδων αρχείων ελέγχου]{Η οθόνη διαχείρισης των αρχείων
+  ελέγχου μετά την προσθήκη των testcase groups. Διακρίνεται η επισκόπηση τους,
+  μαζί με τα αρχεία ελέγχου που περιέχουν και τους βαθμούς τους.}
 \end{figure}
 
 \begin{figure}
   \centering
   \includegraphics[scale=0.3,trim=4 4 4 4,clip]{Figures/groupedit.png}
-  \caption[Οθόνη διαχείρισης προβλήματος]{Η οθόνη της διαχείρισης ενός διαγωνισμού.
-  Διακρίνονται συνολικά στατιστικά για τις υποβολές, η κατάσταση της ουράς και των
-  Workers.}
+  \caption[Διαχείριση ομάδας αρχείων ελέγχου]{Εδώ φαίνεται η νέα οθόνη που
+  δημιουργήθηκε για την δημιουργία και τροποποίηση μιας ομάδας αρχείων ελέγχου.}
 \end{figure}
 
 \bigskip
@@ -1083,17 +1081,17 @@ callback για την χρησιμοποίηση αυτών των αποτελ
 \begin{figure}
   \centering
   \includegraphics[scale=0.3,trim=4 4 4 4,clip]{Figures/allsubmissions.png}
-  \caption[Οθόνη διαχείρισης προβλήματος]{Η οθόνη της διαχείρισης ενός διαγωνισμού.
-  Διακρίνονται συνολικά στατιστικά για τις υποβολές, η κατάσταση της ουράς και των
-  Workers.}
+  \caption[Νέα οθόνη εμφάνισης υποβολών]{Η τροποποιημένη παρουσίαση όλων των
+  υποβολών ενός διαγωνιζόμενου, όπου διακρίνεται ο βαθμός επιτυχίας της υποβολής
+  ως προς τα testcase groups που είχε σωστά.}
 \end{figure}
 
 \begin{figure}
   \centering
   \includegraphics[scale=0.3,trim=4 4 4 4,clip]{Figures/cursubmission.png}
-  \caption[Οθόνη διαχείρισης προβλήματος]{Η οθόνη της διαχείρισης ενός διαγωνισμού.
-  Διακρίνονται συνολικά στατιστικά για τις υποβολές, η κατάσταση της ουράς και των
-  Workers.}
+  \caption[Νέα οθόνη λεπτομέρειων υποβολής]{Η οθόνη τροποποιήθηκε σύμφωνα με τον
+  νέο τρόπο αξιολόγησης, παρουσιάζοντας για κάθε ομάδα την αξιολόγηση της υποβολής
+  για κάθε αρχείο ελέγχου που περιέχει.}
 \end{figure}
 
 \bigskip
@@ -1143,17 +1141,17 @@ callback για την χρησιμοποίηση αυτών των αποτελ
 \begin{figure}
   \centering
   \includegraphics[scale=0.3,trim=4 4 4 4,clip]{Figures/groupsbefore.png}
-  \caption[Οθόνη διαχείρισης προβλήματος]{Η οθόνη της διαχείρισης ενός διαγωνισμού.
-  Διακρίνονται συνολικά στατιστικά για τις υποβολές, η κατάσταση της ουράς και των
-  Workers.}
+  \caption[Βάση πριν τα testcase groups]{Οι πίνακες και οι σχέσεις της βάσης πριν
+  τις αλλαγές μας.}
 \end{figure}
 
 \begin{figure}
   \centering
   \includegraphics[scale=0.3,trim=4 4 4 4,clip]{Figures/groupsafter.png}
-  \caption[Οθόνη διαχείρισης προβλήματος]{Η οθόνη της διαχείρισης ενός διαγωνισμού.
-  Διακρίνονται συνολικά στατιστικά για τις υποβολές, η κατάσταση της ουράς και των
-  Workers.}
+  \caption[Βάση μετά τα testcase groups]{Δημιουργήθηκε ο νέος πίνακας GroupDetails,
+  που είναι απαραίτητος για την αντιστοίχιση testcase groups με αρχεία ελέγχου.
+  Επίσης, προστέθηκε το πεδίο resultsjson για την αποθήκευση των υπολογισμένων
+  αποτελεσμάτων της υποβολής.}
 \end{figure}
 
 \chapter{Σχεδίαση για διαχωρισμό Προβλημάτων - Διαγωνισμών}
@@ -1192,7 +1190,7 @@ callback για την χρησιμοποίηση αυτών των αποτελ
 \begin{figure}
   \centering
   \includegraphics[scale=0.4,trim=4 4 4 4,clip]{Figures/beforesep.png}
-  \caption[Η αρχιτεκτονική του CMS]{Οι υπηρεσίες του CMS και οι σχέσεις μεταξύ τους}
+  \caption[Βάση πριν το διαχωρισμό]{Διακρίνου}
 \end{figure}
 (TODO εδώ εικόνα διαχείρισης και ισως αλλαγή αναφορών σε εικονα 1, 2 κτλ.)
 
@@ -1500,7 +1498,9 @@ descriptor.json σαν λίστες αντικειμένων. Κάθε αντι�
 τιμές orange, yellow, blue, green, purple. Ακολουθεί ένα πρότυπο
 descriptor.json στο οποίο έχουν συμπληρωθεί όλα τα διαθέσιμα πεδία.
 
-\lstinputlisting[caption=Παράδειγμα descriptor.json]{Listings/descriptordiploma.json}
+\FloatBarrier
+
+\lstinputlisting[frame=single,captionpos=b,caption=Παράδειγμα descriptor.json]{Listings/descriptordiploma.json}
 
 \begin{figure}
   \centering
@@ -1627,7 +1627,9 @@ execute. Η επέκταση εμπεριέχει, επίσης, και δική
 παραδείγματα απλών λειτουργιών χρησιμοποιώντας τη συγκεκριμένη επέκταση/API.
 
 
-\lstinputlisting[caption=Παραδείγματα χρήσης PDO]{Listings/pdoexamples.php}
+\FloatBarrier
+
+\lstinputlisting[frame=single,captionpos=b,caption=Παραδείγματα χρήσης PDO]{Listings/pdoexamples.php}
 
 \chapter{Συμπεράσματα}
 
