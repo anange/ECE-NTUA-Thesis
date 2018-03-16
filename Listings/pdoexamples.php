@@ -1,34 +1,35 @@
 <?php
+// Connecting to a MySQL database
 $user = "root";
 $pass = "root";
-$dsn = "mysql:host=localhost;dbname=test";
 $charset = "utf8";
+$dsn = "mysql:host=localhost;dbname=test;charset=$charset";
 
-$dbh = new PDO('mysql:host=localhost;dbname=test;charset=$charset', $user, $pass);
-?>
+$db = new PDO($dsn, $user, $pass);
 
-<?php
+// Executing a simple query
+$val = 42;
 
-$query = "SELECT * FROM foo WHERE bar = " . $db->quote($zip);
-
+$query = "SELECT * FROM foo WHERE bar = " . $db->quote($val);
 $result = $db->query($query);
 
 while($row = $result->fetch(PDO::FETCH_ASSOC)) {
     print_r($row);
 }
-?>
 
-<?php
-$stmt = $dbh->prepare("INSERT INTO REGISTRY (name, value) VALUES (:name, :value)");
+// Sequential executions of a prepared statement
+$query = "INSERT INTO REGISTRY (name, value)
+          VALUES (:name, :value)";
+$stmt = $db->prepare($query);
 $stmt->bindParam(':name', $name);
 $stmt->bindParam(':value', $value);
 
-// insert one row
+// First execution
 $name = 'one';
 $value = 1;
 $stmt->execute();
 
-// insert another row with different values
+// Second execution with different values
 $name = 'two';
 $value = 2;
 $stmt->execute();

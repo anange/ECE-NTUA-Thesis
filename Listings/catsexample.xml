@@ -4,6 +4,7 @@
    author="Admin" inputFile="titlos.in" outputFile="titlos.out">
 
 <Keyword code="alg.geometry"/>
+
 <ProblemStatement>
   Problem statement and description.
 </ProblemStatement>
@@ -17,15 +18,15 @@
 </OutputFormat>
 
 <ProblemConstraints>
-$1 \le m \le 100$, $-100 \le x_i \le 100, 0 &lt; y_i \le 100$
+  $1 \le m \le 100$, $-100 \le x_i \le 100, 0 &lt; y_i \le 100$
 </ProblemConstraints>
 
 <Sample rank="1">
-  <SampleIn>
-3
-1 2 3
-4 5 6
-7 8 9
+<SampleIn>
+  3
+  1 2 3
+  4 5 6
+  7 8 9
 </SampleIn>
 <SampleOut>
   6
@@ -38,7 +39,10 @@ $1 \le m \le 100$, $-100 \le x_i \le 100, 0 &lt; y_i \le 100$
 <Import guid="std.testlib.1.1" type="checker" />
 <Checker name="ch" src="check.dpr" style="testlib"/>
 
-<TestRange from="1" to="42"><In src="tests/%0n"/><Out use="sol"/></TestRange>
+<TestRange from="1" to="42">
+  <In src="tests/%0n"/>
+  <Out use="sol"/>
+</TestRange>
 
 </Problem>
 </CATS>
