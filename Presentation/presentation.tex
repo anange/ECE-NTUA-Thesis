@@ -1,0 +1,93 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% LaTeX Template
+% Version 1.0 (10/11/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND THEMES
+%----------------------------------------------------------------------------------------
+
+\documentclass{beamer}
+
+\usepackage{booktabs}% http://ctan.org/pkg/booktabs
+
+%\usepackage{fontspec}% provides font selecting commands 			%loaded
+%\usepackage{xunicode}% provides unicode character macros 			%loaded
+\usepackage{xltxtra} % provides some fixes/extras 		laut console no
+\defaultfontfeatures{Mapping=tex-text}
+\setromanfont[Mapping=tex-text]{Liberation Serif}
+\setsansfont[Mapping=tex-text]{Liberation Sans}
+%\newfontfamily{\grk}[Scale=MatchLowercase]{} % pick a font for
+\newfontfamily\greekfontsf[Scale=MatchLowercase]{Liberation Serif}
+\newfontfamily\greekfonttt[Script=Greek,Scale=MatchLowercase]{Liberation Sans}
+
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+%\usepackage{enumitem}
+\usepackage{adjustbox}
+\usepackage{anyfontsize}
+%\usepackage{fontspec}
+\usepackage[algoruled]{algorithm2e}
+\usepackage{bytefield}
+
+\usepackage{tikz}
+%\setmainfont{CMU Serif}
+
+\mode<presentation> {
+
+\usepackage{changepage}
+%\usetheme{Warsaw}
+\usetheme{Madrid}
+%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
+%\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
+
+\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+}
+
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+\usepackage[keys]{cryptocode}
+\usepackage{xcolor}
+\usepackage{datetime}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title[Επέκταση Grader]{Σχεδίαση και Επέκταση ενός Συστήματος Αυτόματης Αξιολόγησης Προγραμματιστικών Ασκήσεων} % The short title appears at the bottom of every slide, the full title is only on the title page
+ 
+\author[Αγγελάκης Αντώνιος]{~Αγγελάκης Αντώνιος\inst{1}} % Your name
+\institute[ΕΜΠ] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
+{
+  \inst{1}
+  Εθνικό Μετσόβιο Πολυτεχνείο \includegraphics[scale=0.1]{../Figures/Pyrforos.png} \\ % Your institution for the title page
+  \textit{a.angelakis@protonmail.com} % Your email address
+\medskip
+}
+\date{{\ddmmyyyydate\today}} % Date, can be changed to a custom date
+
+
+\begin{document}
+
+\begin{frame}
+\titlepage % Print the title page as the first slide
+\end{frame}
+
+\begin{frame}
+\frametitle{Επισκόπηση} % Table of contents slide, comment this block out to remove it
+\tableofcontents % Throughout your presentation, if you choose to use \section{} and \subsection{} commands, these will automatically be printed on this slide as an overview of your presentation
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATION SLIDES
+%----------------------------------------------------------------------------------------
+
+
+\end{document}
