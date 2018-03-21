@@ -140,7 +140,7 @@
   \begin{itemize}
       \item Συνοπτική παρουσίαση τριών FOSS συστημάτων διαχείρισης διαγωνισμών
         \bigskip
-      \item Ανάλυση του συστήματος Grader που χρησιμοποιείται από το Softlab και το Hellenico
+      \item Ανάλυση του συστήματος Grader που χρησιμοποιείται από το Softlab και το HelleniCO
         \bigskip
       \item Παρουσίαση των επεκτάσεων που υλοποιήθηκαν στο Grader
   \end{itemize}
@@ -214,14 +214,113 @@
 
 \section{Το σύστημα Grader}
 \begin{frame}
-  Λαλαλα σαδλασδ αλδλςαδλςα
+  \frametitle{Το σύστημα Grader}
+
+  \begin{figure}
+    \includegraphics[scale=0.5]{../Figures/hellenicologo4.png}
+  \end{figure}
+
+  Το σύστημα που θα μελετήσουμε είναι ο Grader. \\
+
+  \bigskip
+
+  Χρησιμοποιείται από το HelleniCO για την προετοιμασία και τη διεξαγωγή του
+  Πανελλήνιου Διαγωνισμού Πληροφορικής και από το Εργαστήριο Τεχνολογίας
+  Λογισμικού (softlab) του ΕΜΠ για την αξιολόγηση ασκήσεων σε μαθήματα όπως τα
+  παρακάτω:
+
   \begin{itemize}
-      \item asdas
-      \item σδασδασ sadaw
+      \item Εισαγωγή στον Προγραμματισμό
+      \item Αλγόριθμοι και Πολυπλοκότητα
+      \item Γλώσσες Προγραμματισμού ΙΙ
   \end{itemize}
 \end{frame}
 
+
+\begin{frame}
+  \frametitle{Αρχιτεκτονική Συστήματος}
+
+  Το σύστημα αποτελείται ουσιαστικά από δύο κομμάτια.
+
+  \begin{itemize}
+      \item Grader Front-end
+      \item Kewii Back-end
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Αρχιτεκτονική Συστήματος}
+
+  %TODO redraw
+  \begin{figure}
+    \includegraphics[scale=0.3]{../Figures/graderarchitecture.png}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Έννοιες του συστήματος}
+
+  \begin{itemize}
+      \item Προβλήματα
+      \item Διαγωνισμοί
+      \item Αρχεία Ελέγχου
+      \item Διαγωνιζόμενοι
+      \item Υποβολές
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Kewii}
+
+  \begin{itemize}
+      \item Πρακτικά ο Kewii είναι το σύστημα αυτόματης αξιολόγησης
+      \item Τρέχει συνεχώς στο server περιμένοντας υποβολές
+      \item Διαθέτει μια ουρά για τις υποβολές και εκτελεί όποια έρχεται σε
+        αποκλεισμένο περιβάλλον
+      \item Αποτελεί, ουσιαστικά, ένα black box αφού για κάθε υποβολή απλά εκτελεί
+        το πρόγραμμα για τα αρχεία ελέγχου που ζητήθηκαν και ενημερώνει τη βάση για
+        την επιτυχία/αποτυχία για κάθε αρχείο ελέγχου
+      \item Τα υπόλοιπα τα αναλαμβάνει ο Grader
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Ροή Kewii}
+
+  \begin{figure}
+    \includegraphics[scale=0.37,trim=4 4 4 4,clip]{../Figures/graderflow.png}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Grader Front-end}
+
+  Το Front-end κομμάτι του Grader αναλαμβάνει τόσο την αλληλεπίδραση με
+  διαχειριστές - διαγωνιζόμενους, όσο και την υλοποίηση της συνολικής λογικής
+  του συστήματος.
+
+  \bigskip
+
+  Οι λειτουργίες του είναι οι παρακάτω:
+  \begin{itemize}
+      \item Δημιουργία και διαχείριση διαγωνισμών και προβλημάτων
+      \item Ανέβασμα και διαχείριση (ανάθεση πόντων) αρχείων ελέγχου
+      \item Υποβολή λύσεων σε ενεργούς διαγωνισμούς από επιλεγμένους διαγωνιζόμενους
+      \item Ανάκτηση αποτελεσμάτων υποβολής, αναλυτική παρουσίαση στο χρήστη
+      \item Τελική αξιολόγηση και δημοσίευση αποτελεσμάτων
+  \end{itemize}
+\end{frame}
+
+%todo ισως διαφανεια περιγραφής common workflow
+
 \section{Επεκτάσεις: Testcase Groups}
+%μια διαφανεια blue tag
+% prosthiki testcase groups dio logia giati
+% pws 8a ginei i ilopoihsh kai pws allazei i logiki
+% isws demo
+% (3-4) diaf
 \begin{frame}
   Λαλαλα σαδλασδ αλδλςαδλςα
   \begin{itemize}
@@ -231,6 +330,8 @@
 \end{frame}
 
 \section{Επεκτάσεις: Αλλαγή σχεδίασης προβλημάτων και διαγωνισμών}
+% 2-3 diaf oti eixame 8ema me ti metakinisi kai ti vasi itan etsi egine etsi
+% antigrafi provlimatos kai epanaxrisimopoihsh
 \begin{frame}
   Λαλαλα σαδλασδ αλδλςαδλςα
   \begin{itemize}
@@ -240,6 +341,9 @@
 \end{frame}
 
 \section{Επεκτάσεις: Python, Mass Testcase Upload, Connector PDO}
+% mia diaf gia python 2 kai poies itan, python 3 soon
+% automato anevasma testcases + groups, descriptor, anafora sto ergaleio isws demo
+% mia diafaneia pdo asfaleia prepared statement abstraction
 \begin{frame}
   Λαλαλα σαδλασδ αλδλςαδλςα
   \begin{itemize}
@@ -250,12 +354,25 @@
 
 
 \section{Μελλοντική Εργασία}
+% mia diafaneia me ena itemize me oles tis malakioules
 \begin{frame}
   Λαλαλα σαδλασδ αλδλςαδλςα
   \begin{itemize}
       \item asdas
       \item σδασδασ sadaw
   \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Τέλος}
+  \centering
+  Ευχαριστώ!
+\end{frame}
+
+\begin{frame}
+  \frametitle{Τέλος}
+  \centering
+  Ερωτήσεις;
 \end{frame}
 
 \end{document}
