@@ -315,18 +315,129 @@
 
 %todo ισως διαφανεια περιγραφής common workflow
 
+\begin{frame}
+  \frametitle{Grader Front-end}
+
+  Το Front-end κομμάτι του Grader αναλαμβάνει τόσο την αλληλεπίδραση με
+  διαχειριστές - διαγωνιζόμενους, όσο και την υλοποίηση της συνολικής λογικής
+  του συστήματος.
+
+  \bigskip
+
+  Οι λειτουργίες του είναι οι παρακάτω:
+  \begin{itemize}
+      \item Δημιουργία και διαχείριση διαγωνισμών και προβλημάτων
+      \item Ανέβασμα και διαχείριση (ανάθεση πόντων και τύπων εκτέλεσης) αρχείων ελέγχου
+      \item Υποβολή λύσεων σε ενεργούς διαγωνισμούς από επιλεγμένους διαγωνιζόμενους
+      \item Ανάκτηση αποτελεσμάτων υποβολής, αναλυτική παρουσίαση στο χρήστη
+      \item Λήξη διαγωνισμού, τελική αξιολόγηση και δημοσίευση αποτελεσμάτων
+  \end{itemize}
+\end{frame}
+
 \section{Επεκτάσεις: Testcase Groups}
+
+\begin{frame}
+\Huge{\centerline{Επεκτάσεις}}
+\end{frame}
+
 %μια διαφανεια blue tag
 % prosthiki testcase groups dio logia giati
 % pws 8a ginei i ilopoihsh kai pws allazei i logiki
 % isws demo
 % (3-4) diaf
 \begin{frame}
-  Λαλαλα σαδλασδ αλδλςαδλςα
+  \frametitle{Testcase Groups και Blue tag}
+  Στο πλαίσιο της συγκεκριμένης επέκτασης δημιουργήθηκαν:
   \begin{itemize}
-      \item asdas
-      \item σδασδασ sadaw
+      \item Ένας νέος τύπος εκτέλεσης αρχείων ελέγχου, το Blue tag \includegraphics[scale=0.8]{../Figures/tag_blue.png}
+      \item Testcase Groups, δηλαδή ομάδες αρχείων ελέγχου
   \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Τύποι εκτέλεσης αρχείων ελέγχου}
+  Τι είναι τύπος εκτέλεσης και ποιοι είναι αυτοί;
+
+  \bigskip
+
+  Οι τύποι εκτέλεσης καθορίζουν το πως και πότε θα χρησιμοποιηθούν τα αρχεία ελέγχου
+  στις υποβολές.
+
+  \begin{figure}
+
+    \includegraphics[scale=0.6,trim=4 4 4 4,clip]{../Figures/tipoi.png}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Blue tag}
+  \begin{block}{Λειτουργία τύπου εκτέλεσης Μπλε \includegraphics[scale=0.8]{../Figures/tag_blue.png}}
+    Οι υποβολές θα ελεγχθούν με το συγκεκριμένο αρχείο ελέγχου την ώρα της υποβολής και ο χρήστης θα μπορεί να δει το αποτέλεσμα, αλλά όχι το αρχείο ελέγχου. Το αποτέλεσμα της εκτέλεσης δεν επηρεάζει το αν θα γίνει δεκτή η υποβολή.
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Προσθήκη testcase groups}
+
+  Προστέθηκε στον Grader η δυνατότητα δημιουργίας testcase groups, ομάδων
+  δηλαδή από αρχεία ελέγχου.
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Testcase groups}
+
+  Τα testcase groups:
+
+  \begin{itemize}
+      \item Ανήκουν σε προβλήματα
+      \item Αποτελούνται από αρχεία ελέγχου και ένα αρχείο μπορεί να είναι
+        σε πολλαπλά groups με διαφορετικό τύπο εκτέλεσης
+      \item Έχουν τίτλο και πόντους
+      \item Παίρνουν τη θέση των αρχείων ελέγχου ως κύριες μονάδες βαθμολόγησης
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Επεξήγηση Λειτουργίας}
+
+  \begin{itemize}
+      \item Αξιολόγηση με βάση groups και όχι tests
+      %\item Η αξιολόγηση πλέον σε κανονικές και τελικές υποβολές γίνεται με βάση
+      % τα testcase groups που το πρόβλημα περιέχει.
+      \item Group σωστό αν αρχεία του σωστά
+      %\item Ένα testcase group θεωρείται σωστό και βαθμολογείται μόνο αν έχουν
+       % αξιολογηθεί ως σωστά τα αρχεία που περιέχει.
+      \item Υποβολή σωστή αν τουλάχιστον ένα group σωστό
+      %\item Ως σωστές θεωρούνται οι υποβολές που ικανοποιούν τουλάχιστον ένα group
+      \item Απαραίτητα τα groups για κάθε πρόβλημα
+      %\item Ο ορισμός testcase groups είναι απαραίτητος για τη λειτουργία της
+      % αξιολόγησης σε κάθε πρόβλημα
+      \item Script για δημιουργία groups σε όλα τα προβλήματα
+      %\item Δημιουργήθηκε script για τη δημιουργία testcase groups για όλα τα
+       %υπάρχοντα προβλήματα.
+      \item Ο Kewii, ως black box, δεν επηρεάζεται
+      %\item Ο Kewii δεν επηρεάζεται, αξιολογεί κάθε υποβολή για τα αρχεία που θα
+        %του ζητηθούν. O Grader επιλέγει και φροντίζει κάθε αρχείο να αξιολογείται
+        %το πολύ μια φορά, ακόμα κι αν ανήκει σε πολλαπλά groups.
+  \end{itemize}
+\end{frame}
+
+% todo mhpws diafaneia gia demo
+\begin{frame}
+  \frametitle{}
+  \begin{figure}
+
+    \includegraphics[scale=0.4,trim=4 4 4 4,clip]{../Figures/groupoverview.png}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{}
+  \begin{figure}
+
+    \includegraphics[scale=0.4,trim=4 4 4 4,clip]{../Figures/groupedit.png}
+  \end{figure}
 \end{frame}
 
 \section{Επεκτάσεις: Αλλαγή σχεδίασης προβλημάτων και διαγωνισμών}
