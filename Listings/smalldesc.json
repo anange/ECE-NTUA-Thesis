@@ -1,0 +1,17 @@
+{
+  "numberOfTests": 4,
+  "testNameFormatInput": "probname.in%d",
+  "testNameFormatOutput": "probname.out%d",
+  "groups": [
+    {
+      "name": "Group 1",
+      "points": 4,
+      "tests": [
+        {
+          "number": 1,
+          "mode": "yellow"
+        }
+      ]
+    }
+  ]
+}

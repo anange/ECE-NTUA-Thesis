@@ -17,6 +17,7 @@
 
 \documentclass{beamer}
 
+\usepackage{listings}
 \usepackage{booktabs}% http://ctan.org/pkg/booktabs
 
 %\usepackage{fontspec}% provides font selecting commands 			%loaded
@@ -45,6 +46,7 @@
 \usepackage{changepage}
 %\usetheme{Warsaw}
 \usetheme{Madrid}
+%\usetheme{CambridgeUS}
 %\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
 %\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
 
@@ -294,25 +296,6 @@
   \end{figure}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Grader Front-end}
-
-  Το Front-end κομμάτι του Grader αναλαμβάνει τόσο την αλληλεπίδραση με
-  διαχειριστές - διαγωνιζόμενους, όσο και την υλοποίηση της συνολικής λογικής
-  του συστήματος.
-
-  \bigskip
-
-  Οι λειτουργίες του είναι οι παρακάτω:
-  \begin{itemize}
-      \item Δημιουργία και διαχείριση διαγωνισμών και προβλημάτων
-      \item Ανέβασμα και διαχείριση (ανάθεση πόντων) αρχείων ελέγχου
-      \item Υποβολή λύσεων σε ενεργούς διαγωνισμούς από επιλεγμένους διαγωνιζόμενους
-      \item Ανάκτηση αποτελεσμάτων υποβολής, αναλυτική παρουσίαση στο χρήστη
-      \item Τελική αξιολόγηση και δημοσίευση αποτελεσμάτων
-  \end{itemize}
-\end{frame}
-
 %todo ισως διαφανεια περιγραφής common workflow
 
 \begin{frame}
@@ -457,7 +440,7 @@
 
 \begin{frame}
   \frametitle{Επιπλοκές μεταφοράς προβλημάτων}
-  
+
   \begin{itemize}
       \item Ανεπιθύμητη μεταφορά υποβολών
       \item Παλαιότεροι διαγωνισμοί χωρίς προβλήματα
@@ -470,13 +453,11 @@
 
 \begin{frame}
   \frametitle{Αλλαγές στη βάση: Πριν}
-  
 
   \begin{figure}
 
     \includegraphics[scale=0.4,trim=4 4 4 4,clip]{../Figures/sepbefore.png}
   \end{figure}
-  
 \end{frame}
 
 \begin{frame}
@@ -485,7 +466,6 @@
   \begin{figure}
     \includegraphics[scale=0.4,trim=4 4 4 4,clip]{../Figures/sepafter.png}
   \end{figure}
-  
 \end{frame}
 
 \begin{frame}
@@ -493,8 +473,8 @@
 
   Η αλλαγή της βάσης επιτρέπει την ύπαρξη των προβλημάτων σε πολλαπλούς διαγωνισμούς
   με ξεχωριστές υποβολές. \\[0.3cm]
-  
-  Δεδομένου ότι δεν υπήρχε πλέον λόγος για μετακίνηση προβλημάτων, προστέθηκε η
+
+  Δεδομένου ότι δεν υπάρχει πλέον λόγος για μετακίνηση προβλημάτων, προστέθηκε η
   δυνατότητα αντιγραφής αυτών σε άλλους διαγωνισμούς.
 \end{frame}
 
@@ -502,22 +482,113 @@
 % mia diaf gia python 2 kai poies itan, python 3 soon
 % automato anevasma testcases + groups, descriptor, anafora sto ergaleio isws demo
 % mia diafaneia pdo asfaleia prepared statement abstraction
+
 \begin{frame}
-  Λαλαλα σαδλασδ αλδλςαδλςα
+  \frametitle{Υποστηριζόμενες γλώσσες Grader}
   \begin{itemize}
-      \item asdas
-      \item σδασδασ sadaw
+      \setlength\itemsep{0em}
+      \item C
+      \item C++
+      \item Pascal
+      \item Pazcal
+      \item F\#
+      \item OCaml
+      \item Java
+      \item Fortran
+      \item Haskell
   \end{itemize}
 \end{frame}
 
+\begin{frame}
+  \frametitle{Προσθήκη Python}
+
+  \begin{figure}
+    \includegraphics[scale=0.4]{../Figures/python.png}
+  \end{figure}
+
+  \begin{itemize}
+      \item Λείπει μια scripting γλώσσα
+      \item Επιλέξαμε την Python λόγω της δημοτικότητας της
+      \item Αλλαγή στον Kewii ώστε να προσαρμοστεί σε μια interpreted γλώσσα
+      \item Επιλέχθηκε η Python 2, εύκολη και η προσθήκη της Python 3
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Μαζικό (αυτόματο) ανέβασμα testcase}
+
+   Κατά τη δημιουργία ενός νέου προβλήματος πρέπει να καταχωρηθούν τα αρχεία
+   ελέγχου στο Grader. \\[0.3cm]
+
+   Δυστυχώς, αυτό πρέπει να γίνει ξεχωριστά για κάθε ζευγάρι αρχείων εισόδου
+   εξόδου. \\[0.3cm]
+
+   Ως αποτέλεσμα, για πολλά αρχεία η διαδικασία είναι χρονοβόρα ή χρησιμοποιούνται
+   αυτοσχέδια scripts. Αυτό θα διορθωθεί.
+\end{frame}
+
+\begin{frame}
+  \frametitle{Μαζικό (αυτόματο) ανέβασμα testcase}
+
+  Προστέθηκε η δυνατότητα μαζικής καταχώρησης αρχείων ελέγχου.
+
+  \begin{itemize}
+      \item Ανέβασμα zip
+      \item Περιέχει τα αρχεία ελέγχου και ένα αρχείο JSON
+      \item Το descriptor.json καθορίζει το format της ονομασίας των αρχείων
+      \item Καθορίζει, επίσης, πλήρως τα testcase groups
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Παράδειγμα descriptor.json}
+
+\lstinputlisting[basicstyle=\small]{../Listings/smalldesc.json}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Εργαλείο δημιουργίας descriptor}
+
+  Το descriptor.json χάρη στη JSON μορφή του μπορεί να συνταχθεί χειρωνακτικά. \\[0.3cm]
+
+  Παρόλα αυτά, κρίθηκε αναγκαία η δημιουργία ενός εργαλείου αυτόματης δημιουργίας
+  του αρχείου.\\[0.3cm]
+
+  Πρόκειται για ένα interactive python script που καθοδηγεί το χρήστη και παράγει
+  αυτόματα το απαιτούμενο αρχείο. \\[0.3cm]
+
+  Ακολουθεί ένα μικρό demo.
+\end{frame}
+
+\begin{frame}
+  \frametitle{Προσθήκη connector PDO}
+
+  Μια πιο τεχνική αλλαγή ήταν η αλλαγή της βιβλιοθήκης σύνδεσης με την MySQL βάση
+  του Grader.\\[0.3cm]
+
+  Η προηγούμενη βιβλιοθήκη, ext/mysql, είχε σταματήσει να υποστηρίζεται ήδη από
+  την PHP 5.5 και χρειαζόταν αλλαγή.\\[0.3cm]
+
+  Για την αντικατάσταση της προτιμήθηκε η PDO που προσφέρει:
+
+  \begin{itemize}
+      \item Ενεργή ανάπτυξη και υποστήριξη
+      \item Δυνατότητα χρήσης διαφόρων βάσεων, μέσω κοινής διεπαφής
+      \item Μεγαλύτερη ταχύτητα και αντοχή στις επιθέσεις τύπου SQL injection με
+        χρήση prepared statements
+  \end{itemize}
+\end{frame}
 
 \section{Μελλοντική Εργασία}
-% mia diafaneia me ena itemize me oles tis malakioules
 \begin{frame}
-  Λαλαλα σαδλασδ αλδλςαδλςα
+  \frametitle{Μελλοντική Εργασία}
   \begin{itemize}
-      \item asdas
-      \item σδασδασ sadaw
+      \item Προσθήκη εργαλείου code reviews στο front-end
+      \item Επανασχεδίαση Grader με χρήση ενός MVC framework ή παρόμοιου
+      \item Βελτίωση ασφάλειας Kewii με χρήση containers ή VM
+      \item Παραλληλοποίηση εκτέλεσης Kewii (βλ. εργασία Τσιαμήτρου)
+      \item Ανάλυση υποβολών Python στη θέση της μεταγλώττισης, π.χ με Pylint
+      \item Προσθήκη Python 3
   \end{itemize}
 \end{frame}
 
